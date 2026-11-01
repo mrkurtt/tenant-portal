@@ -1,7 +1,7 @@
-import { IsString } from 'class-validator';
+import { IsIn } from 'class-validator';
+import { TenantRole } from '../../generated/prisma/client.js';
 
 export class UpdateMemberRoleDto {
-  // Role values come from the portal's role <select>, which only offers ADMIN and MEMBER
-  @IsString()
+  @IsIn([TenantRole.ADMIN, TenantRole.MEMBER])
   role: string;
 }
