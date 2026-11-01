@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { logout } from "../actions";
 import { getCurrentUser, type Tenant } from "@/lib/api";
 import { getDashboardData, type DashboardData } from "@/lib/sample-data";
-import { TenantSwitcher } from "./tenant-switcher";
+import { DashboardHeader } from "./header";
 
 export const metadata: Metadata = { title: "Dashboard · Tenant Portal" };
 
@@ -34,29 +33,7 @@ async function Dashboard({
 
   return (
     <>
-      <header className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
-          <div className="flex items-center gap-4">
-            <div className="flex size-8 items-center justify-center rounded-md bg-indigo-600 text-sm font-semibold text-white">
-              T
-            </div>
-            {tenant && (
-              <TenantSwitcher tenants={user.tenants} activeSlug={tenant.slug} />
-            )}
-          </div>
-          <div className="flex items-center gap-3 text-sm">
-            <span className="text-zinc-600 dark:text-zinc-400">
-              {user.name}{" "}
-              <span className="text-zinc-400">@{user.username}</span>
-            </span>
-            <form action={logout}>
-              <button className="rounded-md border border-zinc-300 px-3 py-1.5 font-medium hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800">
-                Sign out
-              </button>
-            </form>
-          </div>
-        </div>
-      </header>
+      <DashboardHeader user={user} tenant={tenant} active="dashboard" />
 
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
         {tenant ? (
