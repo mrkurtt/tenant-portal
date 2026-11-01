@@ -18,8 +18,11 @@ export class MembersController {
   constructor(private readonly members: MembersService) {}
 
   @Get()
-  list(@CurrentTenant() tenantId: string) {
-    return this.members.list(tenantId);
+  list(
+    @CurrentTenant() tenantId: string,
+    @Req() request: AuthenticatedRequest,
+  ) {
+    return this.members.list(tenantId, request.user);
   }
 
   @Patch(':userId')

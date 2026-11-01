@@ -10,3 +10,8 @@ export function isTenantAdmin(user: JwtPayload, tenantId: string): boolean {
     (tenant) => tenant.id === tenantId && tenant.role === 'ADMIN',
   );
 }
+
+/** Whether the signed-in user belongs to the tenant, as an admin or a member. */
+export function isTenantMember(user: JwtPayload, tenantId: string): boolean {
+  return user.tenants.some((tenant) => tenant.id === tenantId);
+}
