@@ -128,5 +128,5 @@ The API and its database go on **Railway**, and the portal goes on **Vercel**. D
 
 - [x] Add the live URLs here and to the README:
   - Portal: `https://tenant-portal-gamma-lac.vercel.app`
-  - API: `https://tenant-portal-production-ef91.up.railway.app`
+  - API: `https://tenant-portal-api.up.railway.app`
 - [x] Make sure no real secrets are committed. `.env` is git-ignored; only `.env.example` is tracked.

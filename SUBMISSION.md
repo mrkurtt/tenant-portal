@@ -53,7 +53,7 @@ Manual checks against the running local API/portal with seeded users (`password`
 ## Live URLs
 
 - Portal: https://tenant-portal-gamma-lac.vercel.app
-- API: https://tenant-portal-production-ef91.up.railway.app
+- API: https://tenant-portal-api.up.railway.app
 
 ## Where I disagreed with the repo or my AI
 
