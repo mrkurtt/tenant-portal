@@ -7,6 +7,8 @@ A multi-tenant portal. Users sign in with a username and password and switch bet
 | API | NestJS 12, Prisma 7, PostgreSQL | `app/api` | http://localhost:3000 |
 | Portal | Next.js 16 (App Router), Tailwind CSS 4 | `app/portal` | http://localhost:3001 |
 
+**Live:** [Portal](https://tenant-portal-gamma-lac.vercel.app) · [API](https://tenant-portal-production-ef91.up.railway.app)
+
 Both apps live in one pnpm workspace and share a single `.env` at the repo root.
 
 > **Doing the assessment?** Start with [TASKS.md](TASKS.md). It explains how to fork this repo, what to build and how to submit.
