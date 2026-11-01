@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTransition } from "react";
 import type { Tenant } from "@/lib/api";
 
@@ -12,6 +12,7 @@ export function TenantSwitcher({
   activeSlug: string;
 }) {
   const router = useRouter();
+  const pathname = usePathname();
   const [pending, startTransition] = useTransition();
 
   return (
@@ -22,7 +23,7 @@ export function TenantSwitcher({
         disabled={pending || tenants.length < 2}
         onChange={(event) => {
           const slug = event.target.value;
-          startTransition(() => router.push(`/dashboard?tenant=${slug}`));
+          startTransition(() => router.push(`${pathname}?tenant=${slug}`));
         }}
         className="rounded-md border border-zinc-300 bg-white py-1.5 pl-3 pr-8 text-sm font-medium shadow-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 disabled:opacity-70 dark:border-zinc-700 dark:bg-zinc-900"
       >
