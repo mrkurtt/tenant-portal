@@ -50,9 +50,10 @@ Manual checks against the running local API/portal with seeded users (`password`
 - An admin cannot demote themselves (`403`).
 - Invalid roles return `400`; unknown members return `404`.
 
-## Incomplete requirements
+## Live URLs
 
-- **Hosting** (Railway API + Vercel portal) from `TASKS.md` is not done yet. No live URLs to report.
+- Portal: https://tenant-portal-gamma-lac.vercel.app
+- API: https://tenant-portal-production-ef91.up.railway.app
 
 ## Where I disagreed with the repo or my AI
 
