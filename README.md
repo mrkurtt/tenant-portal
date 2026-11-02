@@ -13,6 +13,14 @@ Both apps live in one pnpm workspace and share a single `.env` at the repo root.
 
 > **Doing the assessment?** Start with [TASKS.md](TASKS.md). It explains how to fork this repo, what to build and how to submit.
 
+## AI tools
+
+I used Cursor (Composer) while completing the assessment:
+
+- **Members feature:** drafted and iterated the NestJS `MembersService` / controller / DTO, portal members page and server actions, and unit tests for authorization and tenant isolation.
+- **Hosting and docs:** Railway/Vercel troubleshooting (e.g. public DB URL for seeding, `PORT` vs `API_PORT`), and updates to `TASKS.md`, this README, and [SUBMISSION.md](SUBMISSION.md).
+- **Review:** I treated [TASKS.md](TASKS.md) as the source of truth over repo/`AGENTS.md` guidance and AI suggestions when they conflicted. Places I disagreed are listed in [SUBMISSION.md](SUBMISSION.md#where-i-disagreed-with-the-repo-or-my-ai).
+
 ## Prerequisites
 
 - Node.js 20.19 or newer
